@@ -52,9 +52,10 @@ switch (categoriaChamado) {
 
 if (prejuizoEstimado < 0) {
     console.log("Erro: Valor de prejuízo inválido.");
-} else if (prejuizoEstimado >= 1000 || clienteEnterprise) {
+} else if (prejuizoEstimado >= 10000 || clienteEnterprise) {
     console.log("Prioridade CRÍTICA: Atendimento imediato (SLA: 1 hora).");
-} else if (prejuizoEstimado >= 1000 && prejuizoEstimado < 1000 && !clienteEnterprise) {
+} else if (prejuizoEstimado >= 1000 && prejuizoEstimado < 10000 && !clienteEnterprise) {
     console.log("Prioridade ALTA: Atendimento em até 4 horas.");
-    ("Prioridade NORMAL: Atendimento em até 24 horas.");
+} else {
+    console.log("Prioridade NORMAL: Atendimento em até 24 horas.");
 }
